@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .moving-background {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to right, #5f9aff, #feb47b); /* 背景色やグラデーションを設定 */
+            animation: moveBackground 0.1s linear infinite; /* アニメーションを設定 */
+        }
+
+        @keyframes moveBackground {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+
+            
+        }
+        .content{
+            position: absolute; 
+            z-index: 1;}
+      
+    
+    </style>
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="moving-background"></div>
+    <div class="content">
+        
+     <!-- 背景色の設定 -->
+     <div class="bg-primary text-white p-4">
+        This is a primary background color.
+    </div>
+
+    <div class="bg-secondary text-white p-4">
+        This is a secondary background color.
+    </div>
+    <video src="audio/piano01.mp4"
+     width="640" height="360"
+     id="movie"
+     controls>
+
+    
+       
+        Your browser does not support the video tag.
+      </video>
+    <h1>Example heading <span class="badge bg-secondary">New</span></h1>
+    <!-- 背景画像の設定 -->
+    <div class="bg-image" style="background-image: url('background-image.jpg');">
+        <!-- 背景画像を指定 -->
+        This is a background image.
+    </div>
+    <span class="border"></span>
+    <!-- BootstrapのJavaScriptおよび依存関係の読み込み -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>    
+    
+     <button onclick="playSound()">piano</button>
+
+     <audio id="clickSound">
+        <source src="audio/piano01.wav" type="audio/wav">
+        <source src="audio/a.ogg" type="audio/ogg">
+        your browsernanntyara
+    </audio>
+    <script>
+        function playSound() {
+            var sound = document.getElementById("clickSound");
+            sound.play();
+        }
+    </script>
+    </div>
+    <iframe src="d.html" width="500" height="800"></iframe>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+   
+    
+</body>
+</html>
